@@ -83,10 +83,13 @@ def get_embedded(data, translations):
 @click.option('-q', 'qsf_path', required=True, help="Path to input qsf")
 @click.option('-x', 'excel_path', required=True, help="Path to translation excel file")
 @click.option('-o', 'output', default="output.qsf", help="qsf filename to be generated")
-def main(qsf_path, excel_path, output):
+@click.option('-l', 'language', required=True, help="Survey target language code. e.g. SV, EN")
+def main(qsf_path, excel_path, output, language):
     translations = parse_xlsx(excel_path)
     with open(qsf_path) as f:
         qsf = json.loads(f.read())
+        qsf['SurveyEntry']['SurveyLanguage'] = language.upper()
+
         for q in qsf['SurveyElements']:
             if q['Element'] == "SQ":
                 id = q['PrimaryAttribute']
