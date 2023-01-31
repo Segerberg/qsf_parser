@@ -22,7 +22,7 @@ def parse_xlsx(xlsx):
         italic = _text.font.i
         ids_list = ids.split(';')
         for i in ids_list:
-            if '#' in i:  # todo
+            if 'BLOCK' in i:  # todo
                 continue
             id, qtype = i.split('_')
 
@@ -37,7 +37,7 @@ def parse_xlsx(xlsx):
 
                 text = text.replace('\n', '<br/>')
             else:
-                text = ''
+                text = 'a'
 
             if qtype != "QuestionText" and qtype != "EM":
                 optionno = qtype.split('Choice')[1]
@@ -61,22 +61,17 @@ def parse_xlsx(xlsx):
     return data
 
 
-def get_embedded(data, translations):
-    """
-    Function for recursively yield embedded data values
-    :param data: payload from qsf FL survey element
-    :param translations: Look up dict
-    :return: Generator
-    """
+def get_embedded(q, data, translations):
     if 'Flow' in data:
-        for k in data['Flow']:
-            if k['Type'] == 'EmbeddedData':
-                flowId = k['FlowID']
-                if 'Value' in k['EmbeddedData'][0]:
+        for x in data['Flow']:
+            if x['Type'] == 'EmbeddedData':
+                flowId = x['FlowID']
+                if 'Value' in x['EmbeddedData'][0]:
                     if flowId in translations['em']:
-                        k['EmbeddedData'][0]['Value'] = translations['em'][flowId]
-                        yield k
-            yield from get_embedded(k, translations)
+                        x['EmbeddedData'][0]['Value'] = translations['em'][flowId]
+            get_embedded(q, x, translations)
+    return q
+
 
 
 @click.command()
@@ -86,7 +81,7 @@ def get_embedded(data, translations):
 @click.option('-l', 'language', required=True, help="Survey target language code. e.g. SV, EN")
 def main(qsf_path, excel_path, output, language):
     translations = parse_xlsx(excel_path)
-    with open(qsf_path) as f:
+    with open(qsf_path, encoding='utf-8') as f:
         qsf = json.loads(f.read())
         qsf['SurveyEntry']['SurveyLanguage'] = language.upper()
 
@@ -97,13 +92,11 @@ def main(qsf_path, excel_path, output, language):
                     q['Payload']['QuestionText'] = translations[id]['text']
                     if "Choices" in q['Payload']:
                         for k, v in q['Payload']["Choices"].items():
-                            q['Payload']["Choices"][k]['Display'] = translations[id]['options'][k]
+                            q['Payload']["Choices"][k]['Display'] = translations[id]['options'][k]['text']
 
             elif q['Element'] == "FL":
-                embedded = get_embedded(q['Payload'], translations)
-
-                for e in embedded:
-                    q['Payload'].update(e)
+                embedded = get_embedded(q, q['Payload'], translations)
+                q = embedded
 
         with open(output, 'w', encoding='utf-8') as of:
             of.write(json.dumps(qsf, indent=4, ensure_ascii=False))
