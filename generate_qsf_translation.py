@@ -37,7 +37,7 @@ def parse_xlsx(xlsx):
 
                 text = text.replace('\n', '<br/>')
             else:
-                text = 'a'
+                text = ''
 
             if qtype != "QuestionText" and qtype != "EM":
                 optionno = qtype.split('Choice')[1]
