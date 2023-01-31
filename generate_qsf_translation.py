@@ -70,6 +70,7 @@ def get_embedded(q, data, translations):
                     if flowId in translations['em']:
                         x['EmbeddedData'][0]['Value'] = translations['em'][flowId]
             get_embedded(q, x, translations)
+
     return q
 
 
