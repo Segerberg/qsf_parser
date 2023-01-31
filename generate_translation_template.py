@@ -112,7 +112,7 @@ def main(qsf_path, output, striphtml):
 
         row += 1
         for col in range(1, 4):
-            block = sheet.cell(column=col, row=row, value="#")
+            block = sheet.cell(column=col, row=row, value=f"BLOCK {block_count}")
             block.fill = PatternFill("solid", fgColor="fcba03")
             block.font = fontStyle
         block_count += 1
