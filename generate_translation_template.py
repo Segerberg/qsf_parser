@@ -84,6 +84,18 @@ def main(qsf_path, output, striphtml):
                 else:
                     data[md5]['ids'].append(id)
 
+                if "Answers" in q['Payload']:
+                    for k, v in q['Payload']['Answers'].items():
+                        c_text = v['Display']
+                        id = f"{q['PrimaryAttribute']}_Answer{k}"
+
+                        mod_str = c_text.lower().replace(' ', '')
+                        md5 = hashlib.md5(mod_str.encode('utf-8')).hexdigest()
+                        if md5 not in data:
+                            data[md5] = {"order": order, "text": c_text, "ids": [id]}
+                        else:
+                            data[md5]['ids'].append(id)
+
                 if "Choices" in q['Payload']:
                     for k, v in q['Payload']['Choices'].items():
                         c_text = v['Display']
@@ -119,7 +131,6 @@ def main(qsf_path, output, striphtml):
 
         for k, v in value.items():
             row += 1
-
             a = sheet.cell(column=1, row=row, value=";".join(v['ids']))
             a.protection = Protection(locked=True, hidden=True)
             a.font = fontStyle
