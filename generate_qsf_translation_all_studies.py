@@ -109,9 +109,7 @@ def get_embedded(q, data, translations):
 
 
 @click.command()
-#@click.option('-q', 'qsf_path', required=True, help="Path to input qsf")
 @click.option('-x', 'excel_path', required=True, help="Path to translation excel file")
-#@click.option('-o', 'output', default="output.qsf", help="qsf filename to be generated")
 @click.option('-l', 'language', required=True, help="Survey target language code. e.g. SV, EN")
 @click.option('-s', 'settings', required=True, help="path to settings.json")
 def main(language, excel_path ,settings):
