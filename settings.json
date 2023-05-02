@@ -1,0 +1,31 @@
+{
+  "1": {
+    "name": "temporal",
+    "path": "qsf/climr_temporal_en_template.qsf",
+    "data": {
+      "em": {}
+    }
+  },
+  "2": {
+    "name": "spatial",
+    "path": "qsf/climr_spatial_en_template.qsf",
+    "data": {
+      "em": {}
+    }
+  },
+  "3": {
+    "name": "social",
+    "exclude": ["QID90", "QID91", "QID92", "QID94","QID95"],
+    "path": "qsf/climr_social_en_template.qsf",
+    "data": {
+      "em": {}
+    }
+  },
+  "4": {
+    "name": "likelihood",
+    "path": "qsf/climr_likelihood_en_template.qsf",
+    "data": {
+      "em": {}
+    }
+  }
+}
