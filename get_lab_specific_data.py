@@ -3,7 +3,7 @@ import json
 import os
 import click
 
-token = "ujmu8QMbzOReaZc5pGDxYibWWw900yMi"
+token = ""
 
 
 def get_baserow_data(uri):
