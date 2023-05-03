@@ -1,0 +1,393 @@
+{
+  "C2": [
+    {
+      "<div style=\"text-align: center;\"><strong>[\\w ]*<\\/strong><\\/div>": 1
+    }
+  ],
+  "C37": [
+    {
+      "<div style=\"text-align: center;\"><strong>[\\w :]*<\\/strong><\\/div>": 1
+    },
+    {
+      "<strong>[\\w?'´ : \\d.]*</strong>": 2
+    }
+  ],
+  "C38": [
+    {
+      "<strong>[\\w?'´ : \\d.]*</strong>": 2
+    }
+  ],
+  "C140": [
+    {
+      "<strong>[\\w?'´ ]*</strong>": 1
+    }
+  ],
+  "C148": [
+    {
+      "\\[CURRENT LOCATION\\]": 1
+    },
+    {
+      "\\[3 miles/5 km\\]": 1
+    },
+    {
+      "\\[Current Location\\]": 1
+    }
+  ],
+  "C149": [
+    {
+      "\\[DISTANT LOCATION\\]": 1
+    },
+    {
+      "\\[XXXX miles/XXXX km\\]": 1
+    },
+    {
+      "\\[Distant Location\\]": 1
+    }
+  ],
+  "C189": [
+    {
+      "\\[Distant Location\\]": 1
+    }
+  ],
+  "C190": [
+    {
+      "\\[Current Location\\]": 1
+    }
+  ],
+  "C227": [
+    {
+      "<strong>[\\w?'´ ]*</strong>": 1
+    }
+  ],
+  "C228": [
+    {
+      "\\[Current Location\\]": 1
+    },
+    {
+      "\\[3 miles/5 km\\]": 1
+    }
+  ],
+  "C229": [
+    {
+      "\\[Distant Location\\]": 1
+    },
+    {
+      "\\[XXXX miles/XXXX km\\]": 1
+    }
+  ],
+  "C230": [
+    {
+      "\\[Current Location\\]": 1
+    },
+    {
+      "\\[15 miles/25 km\\]": 1
+    }
+  ],
+  "C231": [
+    {
+      "\\[Alternative Distant Location\\]": 1
+    },
+    {
+      "\\[XXX miles/XXX km\\]": 1
+    }
+  ],
+  "C232": [
+    {
+      "\\[a different country closest to the current location\\]": 1
+    }
+  ],
+  "C233": [
+    {
+      "\\[a different country far away from the current location\\]": 1
+    }
+  ],
+  "C235": [
+    {
+      "\\${e://Field/name_pipe}": 3
+    }
+  ],
+  "C236": [
+    {
+      "<div style=\"text-align: center;\"><strong>[\\w ]*<\\/strong><\\/div>": 1
+    },
+    {
+      "<strong>[\\w?'´ ]*</strong>": 1
+    },
+    {
+      "\\${e://Field/name_pipe}": 3
+    },
+    {
+      "\\${e://Field/gender_pipe}": 1
+    },
+    {
+      "\\${e://Field/age_pipe}": 1
+    },
+    {
+      "\\${e://Field/pronoun_pipe}": 1
+    }
+  ],
+  "C237": [
+    {
+      "<div style=\"text-align: center;\"><strong>[\\w ]*<\\/strong><\\/div>": 1
+    },
+    {
+      "<strong>[\\w?'´ ]*</strong>": 1
+    },
+    {
+      "\\${e://Field/name_pipe}": 3
+    },
+    {
+      "\\${e://Field/gender_pipe}": 1
+    },
+    {
+      "\\${e://Field/age_pipe}": 1
+    },
+    {
+      "\\${e://Field/pronoun_pipe}": 1
+    }
+  ],
+  "C238": [
+    {
+      "\\${e://Field/name_pipe}": 5
+    },
+    {
+      "\\${e://Field/age_pipe}": 1
+    },
+    {
+      "\\${e://Field/pronoun_pipe}": 1
+    },
+    {
+      "\\${e://Field/gender_pipe}": 1
+    }
+  ],
+  "C239": [
+    {
+      "\\${e://Field/name_pipe}": 5
+    },
+    {
+      "\\${e://Field/age_pipe}": 1
+    },
+    {
+      "\\${e://Field/pronoun_pipe}": 1
+    },
+    {
+      "\\${e://Field/gender_pipe}": 1
+    }
+  ],
+  "C240": [
+    {
+      "\\${e://Field/name_pipe}": 1
+    }
+  ],
+  "C243": [
+    {
+      "\\${e://Field/name_pipe}": 1
+    }
+  ],
+  "C246": [
+    {
+      "\\${e://Field/name_pipe}": 1
+    }
+  ],
+  "C249": [
+    {
+      "\\${e://Field/name_pipe}": 1
+    }
+  ],
+  "C252": [
+    {
+      "\\${e://Field/name_pipe}": 1
+    }
+  ],
+  "C255": [
+    {
+      "\\${e://Field/name_pipe}": 1
+    }
+  ],
+  "C258": [
+    {
+      "\\${e://Field/name_pipe}": 1
+    }
+  ],
+  "C261": [
+    {
+      "\\${e://Field/name_pipe}": 1
+    }
+  ],
+  "C262": [
+    {
+      "\\${e://Field/poss_pronoun_pipe}": 1
+    }
+  ],
+  "C264": [
+    {
+      "\\${e://Field/name_pipe}": 1
+    }
+  ],
+  "C267": [
+    {
+      "\\${e://Field/name_pipe}": 1
+    }
+  ],
+  "C270": [
+    {
+      "\\${e://Field/name_pipe}": 1
+    }
+  ],
+  "C273": [
+    {
+      "\\${e://Field/name_pipe}": 1
+    }
+  ],
+  "C276": [
+    {
+      "\\${e://Field/name_pipe}": 1
+    }
+  ],
+  "C279": [
+    {
+      "\\${e://Field/name_pipe}": 1
+    }
+  ],
+  "C282": [
+    {
+      "\\${e://Field/name_pipe}": 1
+    }
+  ],
+  "C284": [
+    {
+      "\\${e://Field/verb_pronoun_pipe}": 1
+    }
+  ],
+  "C285": [
+    {
+      "\\${e://Field/name_pipe}": 1
+    }
+  ],
+  "C287": [
+    {
+      "\\${e://Field/poss_pronoun_pipe}": 1
+    }
+  ],
+  "C288": [
+    {
+      "\\${e://Field/name_pipe}": 1
+    }
+  ],
+  "C290": [
+    {
+      "\\${e://Field/poss_pronoun_pipe}": 1
+    }
+  ],
+  "C291": [
+    {
+      "\\${e://Field/name_pipe}": 1
+    }
+  ],
+  "C294": [
+    {
+      "\\${e://Field/name_pipe}": 1
+    }
+  ],
+  "C297": [
+    {
+      "\\${e://Field/name_pipe}": 1
+    }
+  ],
+  "C300": [
+    {
+      "\\${e://Field/name_pipe}": 1
+    }
+  ],
+  "C303": [
+    {
+      "\\${e://Field/name_pipe}": 1
+    }
+  ],
+  "C306": [
+    {
+      "\\${e://Field/name_pipe}": 1
+    }
+  ],
+  "C307": [
+    {
+      "\\${e://Field/poss_pronoun_pipe}": 1
+    }
+  ],
+  "C309": [
+    {
+      "\\${e://Field/name_pipe}": 1
+    }
+  ],
+  "C312": [
+    {
+      "\\${e://Field/name_pipe}": 1
+    }
+  ],
+  "C315": [
+    {
+      "<strong>[\\w?'´ ]*</strong>": 1
+    }
+  ],
+  "C395": [
+    {
+      "<strong>[\\w?'´,; ]*</strong>": 1
+    }
+  ],
+  "C455": [
+    {
+      "\\[Current Location\\]": 2
+    },
+    {
+      "\\[3 miles/5 km\\]": 2
+    }
+  ],
+  "C456": [
+    {
+      "\\[Distant Location\\]": 2
+    },
+    {
+      "\\[XXXX miles/XXXX km\\]": 2
+    }
+  ],
+  "C459": [
+    {
+      "\\${e://Field/name_pipe}": 4
+    },
+    {
+      "\\${e://Field/gender_pipe}": 1
+    },
+    {
+      "\\${e://Field/age_pipe}": 1
+    },
+    {
+      "\\${e://Field/pronoun_pipe}": 1
+    },
+    {
+      "<em>[\\${}\\w\/: .,;?]*<\/em>": 1
+    },
+    {
+      "<u>[\\w ]*<\\/u>": 2
+    }
+  ],
+  "C460": [
+    {
+      "\\${e://Field/name_pipe}": 4
+    },
+    {
+      "\\${e://Field/gender_pipe}": 1
+    },
+    {
+      "\\${e://Field/age_pipe}": 1
+    },
+    {
+      "\\${e://Field/pronoun_pipe}": 1
+    },
+    {
+      "<em>[\\${}\\w\/: .,;?]*<\/em>": 1
+    },
+    {
+      "<u>[\\w ]*<\\/u>": 2
+    }
+  ]
+}
