@@ -108,6 +108,9 @@
   ],
   "C236": [
     {
+      "\\n": 4
+    },
+    {
       "<div style=\"text-align: center;\"><strong>[\\w ]*<\\/strong><\\/div>": 1
     },
     {
